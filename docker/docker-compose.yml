@@ -1,0 +1,16 @@
+version: "3.2"
+services:
+  react:
+    build:
+      context: './node/'
+    volumes:
+      - ../app/:/app/
+    container_name: "meteor-blog"
+    command: >
+      bash -c "
+        meteor npm install --save react react-dom --allow-superuser &&
+        meteor add static-html --allow-superuser &&
+        meteor --allow-superuser
+      "
+    ports:
+      - "3000:3000"

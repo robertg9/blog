@@ -1,0 +1,130 @@
+$bg-color: #222831;
+$brand-color: #CC7832;
+$grey-color: #333;
+$black-color: #000;
+
+body {
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #fff;
+}
+
+.column-inner,
+#center-column,
+#right-column,
+#left-column {
+  height: 100vh;
+}
+
+#left-column,
+#right-column {
+  width: 260px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: $bg-color;
+}
+
+#left-column {
+  left: 0;
+  border-right: 1px solid $black-color;
+}
+
+#right-column {
+  right: 0;
+  border-left: 1px solid $black-color;
+}
+
+#center-column {
+  display: flex;
+  flex-direction: column;
+  padding: 0 260px;
+}
+
+#left-column .column-inner {
+  border-right: 1px solid $grey-color;
+}
+
+#right-column .column-inner {
+  border-left: 1px solid $grey-color;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.brand-color {
+  color: $brand-color;
+}
+
+.bg-color {
+  color: $bg-color;
+}
+
+#logo-container {
+  background-color: $brand-color;
+  margin-bottom: 40px;
+}
+
+ul#menu {
+  list-style: none;
+  padding: 0;
+}
+
+ul#menu > li.item > a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  align-self: center !important;
+  display: flex;
+  padding: 15px;
+}
+
+ul#menu > li.item > a > .link-name {
+  padding-left: 25px;
+  display: flex;
+}
+
+ul#menu > li.item > a > .link-name > span {
+  align-self: center;
+}
+
+ul#menu > li.item > a > .arrow {
+  align-self: center !important;
+  margin-left: auto;
+  color: $grey-color;
+}
+
+ul#menu > li.item > a:active > .arrow,
+ul#menu > li.item > a:hover > .arrow {
+  color: $brand-color;
+}
+
+ul#menu > li.item img {
+  width: 50px;
+  display: block;
+}
+
+#right-column-toggle-button {
+  left: 20px;
+}
+
+#right-column-toggle-button,
+#menu-button {
+  position: absolute;
+  right: 34px;
+  top: 36px;
+  font-size: 50px;
+  cursor: pointer;
+  color: $brand-color;
+}
+
+.grey-color {
+  color: $grey-color !important;
+}

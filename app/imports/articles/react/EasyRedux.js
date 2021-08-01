@@ -1,15 +1,7 @@
-import Article from "../Article";
-import ArticleInfo, {TYPE_REACT} from "../ArticleInfo";
-export default class extends Article {
+import React from 'react';
 
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return <>
-            TEST ARTICLE
-        </>;
-    }
-
+export const EasyRedux = () => {
+    return <>
+        TRST REASY REDUX
+    </>
 }

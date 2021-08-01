@@ -84,6 +84,7 @@ ul#menu > li.item > a {
   align-self: center !important;
   display: flex;
   padding: 15px;
+  cursor: pointer;
 }
 
 ul#menu > li.item > a > .link-name {
@@ -99,9 +100,10 @@ ul#menu > li.item > a > .arrow {
   align-self: center !important;
   margin-left: auto;
   color: $grey-color;
+  font-size: 45px;
 }
 
-ul#menu > li.item > a:active > .arrow,
+ul#menu > li.item > a.active > .arrow,
 ul#menu > li.item > a:hover > .arrow {
   color: $brand-color;
 }

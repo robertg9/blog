@@ -1,13 +1,22 @@
-import React, { Component } from 'react';
-export default class extends Component {
+export const TYPE_REACT = 'react';
 
-    constructor(props, articleInfo) {
-        super(props);
-        this.articleInfo = articleInfo;
+export default class {
+
+    #type;
+    #title;
+    #createdAt;
+    #component;
+
+    constructor(component, type, title, createdAt) {
+        this.#type = type;
+        this.#title = title;
+        this.#createdAt = createdAt;
+        this.#component = component;
     }
 
-    getArticleInfo() {
-        return this.articleInfo;
-    }
+    getComponent() {return this.#component};
+    getType() {return this.#type};
+    getTitle() {return this.#title};
+    getCreatedAt() {return this.#createdAt};
 
 }
